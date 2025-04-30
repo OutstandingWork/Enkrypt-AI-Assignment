@@ -1,0 +1,36 @@
+{
+  "session_id": "8206d5fd-5ef9-408b-bfb6-60985428a9c6",
+  "user_name": "Shyam",
+  "created_at": "2025-04-27T17:25:08.425169",
+  "last_updated": "2025-04-27T17:25:09.899901",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "date": "2025-10-15",
+    "time": "17:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-10-15",
+      "time": "17:00",
+      "booking_id": 22
+    },
+    "last_booking_date": "2025-10-15",
+    "last_booking_time": "17:00",
+    "last_booking_id": 22,
+    "reference_date": "2025-04-27T17:25:08.425169"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for Dussehra at 5PM",
+      "timestamp": "2025-04-27T17:25:08.443152"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response:\n\n\"Yay! We're thrilled to confirm that your reservation at Paradise Grill has been successful! You're all set for a fantastic dining experience on October 15th at 5:00 PM. And what a great way to celebrate Dussehra with us! We can't wait to welcome you and make your festival even more special. See you soon!\"",
+      "timestamp": "2025-04-27T17:25:09.876350"
+    }
+  ]
+}

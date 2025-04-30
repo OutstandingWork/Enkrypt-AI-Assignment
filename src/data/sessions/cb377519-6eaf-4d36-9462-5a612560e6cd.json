@@ -1,0 +1,33 @@
+{
+  "session_id": "cb377519-6eaf-4d36-9462-5a612560e6cd",
+  "user_name": "PR",
+  "created_at": "2025-04-25T05:08:02.870902",
+  "last_updated": "2025-04-25T05:08:04.229687",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "day": "Monday",
+    "time": "18:30",
+    "ambiguous_time": {
+      "is_ambiguous": true,
+      "detected_time": "half past 6",
+      "possibilities": [
+        "18:30"
+      ]
+    },
+    "pending_clarification": true,
+    "clarification_type": "ambiguous_time"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table on Monday half past 6PM",
+      "timestamp": "2025-04-25T05:08:02.885911"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly question to clarify the time:\n\n\"Hey! Just to confirm, did you mean 6:30 AM or 6:30 PM for your Monday booking? Could you please clarify the time in a format like 2PM or 14:00?\"",
+      "timestamp": "2025-04-25T05:08:04.229687"
+    }
+  ]
+}

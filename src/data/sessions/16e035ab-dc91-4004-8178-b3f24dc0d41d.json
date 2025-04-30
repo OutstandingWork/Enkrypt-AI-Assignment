@@ -1,0 +1,36 @@
+{
+  "session_id": "16e035ab-dc91-4004-8178-b3f24dc0d41d",
+  "user_name": "Ram",
+  "created_at": "2025-04-27T19:24:16.153586",
+  "last_updated": "2025-04-27T19:24:19.156265",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "date": "2025-11-07",
+    "time": "21:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-11-07",
+      "time": "21:00",
+      "booking_id": 22
+    },
+    "last_booking_date": "2025-11-07",
+    "last_booking_time": "21:00",
+    "last_booking_id": 22,
+    "reference_date": "2025-04-27T19:24:16.153586"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for Diwali 9PM",
+      "timestamp": "2025-04-27T19:24:16.167356"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for the hotel booking result:\n\n\"Hooray! Your reservation for Diwali at Paradise Grill restaurant on November 7th at 9:00 PM has been successfully booked! Your booking ID is 22 - we can't wait to celebrate with you!",
+      "timestamp": "2025-04-27T19:24:19.134233"
+    }
+  ]
+}

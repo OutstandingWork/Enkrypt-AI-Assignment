@@ -1,0 +1,38 @@
+{
+  "session_id": "71ab382b-4cb4-4007-a82a-92fd7f3e87c2",
+  "user_name": "Pratyush Ranjan",
+  "created_at": "2025-04-25T06:15:54.460578",
+  "last_updated": "2025-04-25T06:16:19.204343",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "day": "unknown",
+    "time": "unknown",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "Yes, it can be done. The raw time expression extracted from the booking request \"Book a table for Monday at 4PM\" would be:\n\n4PM"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for Wednesday 3PM ",
+      "timestamp": "2025-04-25T06:15:54.474581"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a hotel booking result with the specified details:\n\n\"Sorry to say, but it looks like the slot you were interested in has already been booked by someone else. Would you like to explore other options or try a different date? We're here to help you find the perfect room!\"",
+      "timestamp": "2025-04-25T06:15:55.749248"
+    },
+    {
+      "role": "user",
+      "content": "can it be done for 4PM",
+      "timestamp": "2025-04-25T06:16:15.312255"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day you want to book. Please specify the day.",
+      "timestamp": "2025-04-25T06:16:19.204343"
+    }
+  ]
+}

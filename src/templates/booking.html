@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Grill - Reservations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include flatpickr for date picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0d6efd;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+            transform: translateY(-2px);
+        }
+        #bookingResponse {
+            margin-top: 25px;
+            display: none;
+        }
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .conversation-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .user-message {
+            background-color: #e9ecef;
+            text-align: right;
+            margin-left: 20%;
+        }
+        .system-message {
+            background-color: #d2e3fc;
+            margin-right: 20%;
+        }
+        .slot-table {
+            margin-top: 30px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .slot-cell {
+            min-width: 80px;
+            text-align: center;
+        }
+        .available {
+            background-color: #d4edda;
+        }
+        .booked {
+            background-color: #f8d7da;
+        }
+        .time-header {
+            font-weight: bold;
+        }
+        .restaurant-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .restaurant-logo img {
+            max-width: 200px;
+        }
+        .date-selection {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="restaurant-logo">
+            <h1>Paradise Grill</h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="bookingRequest" class="form-label">Reservation Request</label>
+                        <textarea class="form-control" id="bookingRequest" rows="3" placeholder="Example: 'I'd like a table for tomorrow at 7 PM'" required></textarea>
+                    </div>
+                    <button type="button" id="submitBooking" class="btn btn-primary">Submit Request</button>
+                    
+                    <div class="date-selection mt-4">
+                        <h5>Check Availability</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="datePicker" class="form-label">Select Date</label>
+                                <input type="text" class="form-control" id="datePicker" placeholder="Select date">
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" id="showSlots" class="btn btn-outline-secondary mt-4">Check Available Slots</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="viewMyBookings" class="btn btn-outline-info mt-3">View My Bookings</button>
+                </form>
+                
+                <div id="bookingResponse">
+                    <div id="responseMessage" class="alert"></div>
+                </div>
+                
+                <div id="conversationHistory" class="conversation-box" style="display: none;">
+                    <h4>Conversation History</h4>
+                    <div id="messageContainer"></div>
+                </div>
+
+                <div id="userBookingsContainer" style="display: none;">
+                    <h3 class="mt-4">Your Reservations</h3>
+                    <div id="userBookingsTable"></div>
+                </div>
+
+                <div id="availableSlotsContainer" style="display: none;">
+                    <h3 class="mt-4">Available Slots</h3>
+                    <div id="slotsTable" class="slot-table"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialize date picker
+        const datePicker = flatpickr("#datePicker", {
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            defaultDate: new Date()
+        });
+        
+        // Session management
+        let currentSessionId = null;
+        let conversationHistory = [];
+        
+        // Utility functions for API calls and UI updates
+        function fetchApiData(url, options = {}) {
+            return fetch(url, options)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`API error: ${response.status}`);
+                    }
+                    return response.json();
+                });
+        }
+
+        function showAlert(message, type = 'info') {
+            return `<div class="alert alert-${type}">${message}</div>`;
+        }
+
+        function refreshBookings(userName) {
+            const bookingsContainer = document.getElementById('userBookingsContainer');
+            const bookingsTable = document.getElementById('userBookingsTable');
+            
+            if (!userName) {
+                bookingsTable.innerHTML = showAlert('Please enter your name to view bookings', 'warning');
+                return;
+            }
+            
+            fetchApiData(`/user-bookings/${encodeURIComponent(userName)}`)
+                .then(data => {
+                    // Show the container
+                    bookingsContainer.style.display = 'block';
+                    
+                    // Check if we have bookings
+                    const bookings = data.bookings || [];
+                    
+                    if (bookings.length === 0) {
+                        bookingsTable.innerHTML = showAlert('You have no current reservations', 'info');
+                        return;
+                    }
+                    
+                    // Generate the table
+                    let tableHTML = generateBookingsTable(bookings, userName);
+                    bookingsTable.innerHTML = tableHTML;
+                })
+                .catch(error => {
+                    console.error('Error fetching bookings:', error);
+                    bookingsTable.innerHTML = showAlert('Failed to load your reservations', 'danger');
+                });
+        }
+
+        function generateBookingsTable(bookings, userName) {
+            let tableHTML = '<table class="table table-bordered">';
+            tableHTML += '<thead><tr><th>Date</th><th>Time</th><th>Booking ID</th><th>Action</th></tr></thead>';
+            tableHTML += '<tbody>';
+            
+            bookings.forEach(booking => {
+                tableHTML += `<tr>
+                    <td>${booking.date}</td>
+                    <td>${booking.time}</td>
+                    <td>${booking.booking_id}</td>
+                    <td>
+                        <button class="btn btn-sm btn-danger" 
+                            onclick="cancelBooking('${userName}', '${booking.date}', '${booking.time}', ${booking.booking_id})">
+                            Cancel
+                        </button>
+                    </td>
+                </tr>`;
+            });
+            
+            tableHTML += '</tbody></table>';
+            return tableHTML;
+        }
+
+        function generateAvailableSlotsTable(availableSlots, date) {
+    if (availableSlots.length === 0) {
+        return showAlert('No available slots found for the selected date.', 'warning');
+    }
+    
+    console.log("Selected date:", date);
+    console.log("Available slots:", availableSlots);
+    
+    // Generate the table
+    let tableHTML = '<table class="table table-bordered">';
+    tableHTML += `<tr><th colspan="3">Available Times for ${date}</th></tr>`;
+    
+    // Sort the available times - don't filter by date as the backend already did that
+    const times = availableSlots
+        .map(slot => slot.time)
+        .sort();
+    
+    // Create a grid with 3 slots per row
+    for (let i = 0; i < times.length; i += 3) {
+        tableHTML += '<tr>';
+        for (let j = 0; j < 3 && i + j < times.length; j++) {
+            const time = times[i + j];
+            tableHTML += `<td class="available slot-cell" data-time="${time}" onclick="selectTime('${time}')">
+                ${time}
+            </td>`;
+        }
+        tableHTML += '</tr>';
+    }
+    
+    tableHTML += '</table>';
+    return tableHTML;
+}
+        function displayResponse(data) {
+            const responseDiv = document.getElementById('bookingResponse');
+            const responseMsg = document.getElementById('responseMessage');
+            
+            // Store the session ID for follow-up questions
+            if (data.session_id) {
+                currentSessionId = data.session_id;
+            }
+            
+            // Display the response
+            responseDiv.style.display = 'block';
+            const responseText = data.nlp_response || data.message;
+            responseMsg.innerHTML = responseText;
+            
+            // Add system message to conversation history
+            addMessageToHistory('system', responseText);
+            
+            // Handle different response statuses
+            if (data.status === 'pending') {
+                // We're waiting for clarification
+                responseMsg.className = 'alert alert-warning';
+                // Clear the input field to get the user's next response
+                document.getElementById('bookingRequest').value = '';
+                document.getElementById('bookingRequest').focus();
+            } else {
+                // Success or failure response
+                responseMsg.className = data.status === 'success' ? 'alert alert-success' : 'alert alert-danger';
+                
+                // If booking was successful, reset the form and session
+                if (data.status === 'success') {
+                    document.getElementById('bookingRequest').value = '';
+                }
+            }
+        }
+
+        // Add message to conversation history
+        function addMessageToHistory(role, content) {
+            conversationHistory.push({ role, content });
+            updateConversationDisplay();
+        }
+        
+        // Update the conversation display
+        function updateConversationDisplay() {
+            const messageContainer = document.getElementById('messageContainer');
+            messageContainer.innerHTML = '';
+            
+            conversationHistory.forEach(message => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${message.role}-message`;
+                messageDiv.innerHTML = message.content;
+                messageContainer.appendChild(messageDiv);
+            });
+            
+            // Scroll to the bottom of the conversation
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+            
+            // Show conversation history if there are messages
+            if (conversationHistory.length > 0) {
+                document.getElementById('conversationHistory').style.display = 'block';
+            }
+        }
+        
+        // Handle form submission
+        document.getElementById('submitBooking').addEventListener('click', function() {
+            const userName = document.getElementById('userName').value;
+            const bookingRequest = document.getElementById('bookingRequest').value;
+            
+            if (!userName || !bookingRequest) {
+                alert('Please enter both your name and reservation request.');
+                return;
+            }
+            
+            // Add user message to conversation history
+            addMessageToHistory('user', bookingRequest);
+            
+            // Include the session ID if we have one
+            const requestBody = {
+                user_name: userName,
+                booking_request: bookingRequest
+            };
+            
+            if (currentSessionId) {
+                requestBody.session_id = currentSessionId;
+            }
+            
+            // Disable button during processing
+            const submitButton = document.getElementById('submitBooking');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Processing...';
+            
+            fetchApiData('/booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            })
+            .then(data => {
+                displayResponse(data);
+                
+                // Re-enable the submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Submit Request';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while processing your reservation request.');
+                
+                // Re-enable the submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Submit Request';
+            });
+        });
+        
+        // Show/hide available slots
+        document.getElementById('showSlots').addEventListener('click', function() {
+            const slotsContainer = document.getElementById('availableSlotsContainer');
+            const slotsTable = document.getElementById('slotsTable');
+            const selectedDate = datePicker.selectedDates[0];
+            
+            if (!selectedDate) {
+                alert('Please select a date first');
+                return;
+            }
+            
+            // Fix timezone issue by using local date methods instead of UTC
+            const year = selectedDate.getFullYear();
+            const month = String(selectedDate.getMonth() + 1).padStart(2, '0');
+            const day = String(selectedDate.getDate()).padStart(2, '0');
+            const formattedDate = `${year}-${month}-${day}`; // YYYY-MM-DD format in local timezone
+            
+            // Toggle visibility - if visible, hide it and exit
+            if (slotsContainer.style.display === 'block') {
+                slotsContainer.style.display = 'none';
+                return;
+            }
+            
+            // Otherwise, show slots for the selected date
+            fetchApiData(`/slots?start_date=${formattedDate}&end_date=${formattedDate}`)
+            .then(data => {
+                // Show the container
+                slotsContainer.style.display = 'block';
+                
+                // Generate and display the table
+                const availableSlots = data.available_slots || [];
+                slotsTable.innerHTML = generateAvailableSlotsTable(availableSlots, formattedDate);
+            })
+            .catch(error => {
+                console.error('Error fetching slots:', error);
+                slotsTable.innerHTML = showAlert('Failed to load available slots.', 'danger');
+            });
+        });
+        
+        // Function to select a time from the available slots
+        function selectTime(time) {
+            const selectedDate = datePicker.selectedDates[0];
+            const formattedDate = `${selectedDate.getFullYear()}-${String(selectedDate.getMonth() + 1).padStart(2, '0')}-${String(selectedDate.getDate()).padStart(2, '0')}`;
+            
+            // Add text to the booking request textarea
+            const bookingRequest = document.getElementById('bookingRequest');
+            bookingRequest.value = `I'd like to reserve a table on ${formattedDate} at ${time}`;
+            
+            // Highlight the selected time
+            const cells = document.querySelectorAll('.slot-cell');
+            cells.forEach(cell => {
+                cell.classList.remove('selected');
+                cell.style.backgroundColor = '';
+            });
+            
+            const selectedCell = document.querySelector(`.slot-cell[data-time="${time}"]`);
+            if (selectedCell) {
+                selectedCell.classList.add('selected');
+                selectedCell.style.backgroundColor = '#b3e0ff';
+            }
+            
+            // Focus on the booking request textarea
+            bookingRequest.focus();
+        }
+        
+        // Allow Enter key to submit when in the textarea
+        document.getElementById('bookingRequest').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                document.getElementById('submitBooking').click();
+            }
+        });
+
+        document.getElementById('viewMyBookings').addEventListener('click', function() {
+            const userName = document.getElementById('userName').value;
+            
+            if (!userName) {
+                alert('Please enter your name to view your reservations.');
+                return;
+            }
+            
+            const bookingsContainer = document.getElementById('userBookingsContainer');
+            
+            // Toggle visibility - if visible, hide it and exit
+            if (bookingsContainer.style.display === 'block') {
+                bookingsContainer.style.display = 'none';
+                return;
+            }
+            
+            // Display the user's bookings
+            refreshBookings(userName);
+        });
+
+        function cancelBooking(userName, date, time, bookingId) {
+            if (confirm(`Are you sure you want to cancel your reservation on ${date} at ${time}?`)) {
+                fetchApiData('/cancel-booking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_name: userName,
+                        date: date,
+                        time: time,
+                        booking_id: bookingId
+                    }),
+                })
+                .then(data => {
+                    // Display the response
+                    displayResponse(data);
+                    
+                    // Refresh the bookings view
+                    if (data.status === 'success') {
+                        // Toggle twice to refresh the view
+                        document.getElementById('viewMyBookings').click();
+                        document.getElementById('viewMyBookings').click();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while canceling your reservation.');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

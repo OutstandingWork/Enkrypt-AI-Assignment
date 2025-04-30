@@ -1,0 +1,38 @@
+{
+  "session_id": "c3e87d59-6aaa-4474-b625-15dfdc31f3da",
+  "user_name": "PR",
+  "created_at": "2025-04-25T06:33:03.091695",
+  "last_updated": "2025-04-25T06:33:31.255082",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Wednesday",
+    "time": "16:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "4PM"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for Wednesday 3PM",
+      "timestamp": "2025-04-25T06:33:03.119203"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response:\n\n\"Sorry to inform you that we're unable to confirm your booking. It looks like the room you selected is no longer available as it has already been booked by another guest. Would you like to explore other options or dates that might work for you?\"",
+      "timestamp": "2025-04-25T06:33:03.937599"
+    },
+    {
+      "role": "user",
+      "content": "Then do it for 4PM",
+      "timestamp": "2025-04-25T06:33:29.814459"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response:\n\n\"Great news! Your hotel booking has been successful. We've reserved a slot for you on Wednesday at 16:00. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-25T06:33:31.244075"
+    }
+  ]
+}

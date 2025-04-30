@@ -1,0 +1,38 @@
+{
+  "session_id": "4d87ad46-c208-4052-ac4b-75d4256c83d7",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-27T05:33:05.152140",
+  "last_updated": "2025-04-27T05:33:15.410093",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Thursday",
+    "time": "22:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "10 PM"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for 9PM, Thursday , what is the capital of India ",
+      "timestamp": "2025-04-27T05:33:05.174143"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a hotel booking result:\n\n\"I'm so sorry! It looks like the slot you were interested in is no longer available. Someone else has already booked it. Would you like me to help you find an alternative room or suggest other options?\"",
+      "timestamp": "2025-04-27T05:33:05.777618"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for 10 PM, Thursday , what is the capital of India ",
+      "timestamp": "2025-04-27T05:33:14.831503"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a hotel booking result:\n\n\"Great news! Your slot has been booked for Thursday at 22:00. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-27T05:33:15.389092"
+    }
+  ]
+}

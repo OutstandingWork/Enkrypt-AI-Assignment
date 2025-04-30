@@ -1,0 +1,101 @@
+{
+  "session_id": "5a58433c-c6e3-490d-9d10-2566a2655562",
+  "user_name": "sfhbhjsf",
+  "created_at": "2025-04-28T00:34:33.943147",
+  "last_updated": "2025-04-28T00:53:04.449976",
+  "status": "completed",
+  "context": {
+    "intent": "availability",
+    "date": "2025-05-05",
+    "time": "19:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-05-05",
+      "time": "19:00",
+      "booking_id": 23
+    },
+    "last_booking_date": "2025-05-05",
+    "last_booking_time": "19:00",
+    "last_booking_id": 23,
+    "reference_date": "2025-04-28T00:34:33.943147"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table on Labour's day for 1PM",
+      "timestamp": "2025-04-28T00:34:33.958163"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for the Paradise Grill booking result:\n\n\"Sorry to say, but it looks like the slot for Labour's Day at [time] has already been booked. We apologize for the inconvenience and would be happy to help you find an alternative time that suits you. Please let us know if there's anything else we can do for you!",
+      "timestamp": "2025-04-28T00:34:35.271821"
+    },
+    {
+      "role": "user",
+      "content": "Then book it for a day after Labor's day",
+      "timestamp": "2025-04-28T00:35:00.407933"
+    },
+    {
+      "role": "user",
+      "content": "Time is 1PM",
+      "timestamp": "2025-04-28T00:35:10.036753"
+    },
+    {
+      "role": "system",
+      "content": "Aloha! We're thrilled to confirm that your table is booked for September 3rd at 1:00 PM at Paradise Grill! Your booking ID is 23. We can't wait to welcome you to our tropical oasis!",
+      "timestamp": "2025-04-28T00:35:10.735017"
+    },
+    {
+      "role": "user",
+      "content": "Cancel the booking I did just now",
+      "timestamp": "2025-04-28T00:38:32.922246"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a Paradise Grill reservation cancellation:\n\n\"Thank you for reaching out to cancel your reservation at Paradise Grill. We've successfully cancelled your booking for Wednesday, September 03 at 13:00. If you need to make any further changes or have any other questions, please don't hesitate to contact us.",
+      "timestamp": "2025-04-28T00:38:33.826646"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for a week after today for 7PM",
+      "timestamp": "2025-04-28T00:39:16.878019"
+    },
+    {
+      "role": "system",
+      "content": "Aloha! We're thrilled to confirm your table reservation at Paradise Grill on May 5th, 2025 at 19:00! Your booking ID is 23. We can't wait to welcome you to our little slice of paradise!",
+      "timestamp": "2025-04-28T00:39:17.787178"
+    },
+    {
+      "role": "user",
+      "content": "Cancel the booking I did just now",
+      "timestamp": "2025-04-28T00:39:33.817963"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a Paradise Grill reservation cancellation:\n\n\"I'm sorry to inform you that we couldn't find any bookings under the name 'Kumari' to cancel. If you could provide more details about your reservation, I'd be happy to assist you further. Please feel free to reach out to us for any help.",
+      "timestamp": "2025-04-28T00:39:34.683517"
+    },
+    {
+      "role": "user",
+      "content": "Cancel the booking I did just now",
+      "timestamp": "2025-04-28T00:39:46.509646"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a Paradise Grill reservation cancellation:\n\n\"Thank you for cancelling your reservation at Paradise Grill on Monday, May 05 at 19:00. We have successfully cancelled your booking and appreciate your notification. If you need to make any future reservations, please don't hesitate to reach out to us.",
+      "timestamp": "2025-04-28T00:39:47.257872"
+    },
+    {
+      "role": "user",
+      "content": "Show me the avilable slots for two days after tomorrow",
+      "timestamp": "2025-04-28T00:53:03.554890"
+    },
+    {
+      "role": "system",
+      "content": "Hey there! We'd be happy to have you at Paradise Grill on Wednesday, April 30. We have 11 available reservation slots to choose from: 9:00, 10:00, 11:00, 1:00, 2:00, 4:00, 5:00, 6:00, 7:00, 8:00, or 11:00 PM. Let us know which one works best for you!",
+      "timestamp": "2025-04-28T00:53:04.449976"
+    }
+  ]
+}

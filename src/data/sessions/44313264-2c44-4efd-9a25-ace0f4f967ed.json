@@ -1,0 +1,38 @@
+{
+  "session_id": "44313264-2c44-4efd-9a25-ace0f4f967ed",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-25T06:24:10.070457",
+  "last_updated": "2025-04-25T06:24:31.239970",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "day": "Wednesday",
+    "time": "unknown",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "The answer is: 4PM"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table for Wednesday 3PM",
+      "timestamp": "2025-04-25T06:24:10.086190"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response:\n\n\"Sorry to inform you that we couldn't confirm your booking. It looks like the slot you requested is already booked by another guest. Would you like us to suggest an alternative room or date?\"",
+      "timestamp": "2025-04-25T06:24:11.109048"
+    },
+    {
+      "role": "user",
+      "content": "can it be done for 4PM",
+      "timestamp": "2025-04-25T06:24:28.189043"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine what time you want to book. Please specify an hourly time between 9 AM and 11 PM.",
+      "timestamp": "2025-04-25T06:24:31.239970"
+    }
+  ]
+}

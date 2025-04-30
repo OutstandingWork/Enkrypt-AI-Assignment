@@ -1,0 +1,40 @@
+{
+  "session_id": "f850bb36-0abd-4d17-920c-6da78e9ac567",
+  "user_name": "PR",
+  "created_at": "2025-04-25T06:05:45.912710",
+  "last_updated": "2025-04-25T06:06:06.296735",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Monday",
+    "time": "19:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "half past 6",
+    "original_time": "18:30",
+    "suggested_time": "19:00"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table half past 6 on Monday",
+      "timestamp": "2025-04-25T06:05:45.932715"
+    },
+    {
+      "role": "system",
+      "content": "I noticed you requested a booking for half past 6 on Monday. Our system only accepts bookings on the hour. Would you like me to book 19:00 instead? The hotel is open from 9 AM to 12 midnight.",
+      "timestamp": "2025-04-25T06:05:46.880124"
+    },
+    {
+      "role": "user",
+      "content": "Then book it for 6PM",
+      "timestamp": "2025-04-25T06:06:05.961551"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response:\n\n\"Great news! Your hotel booking is confirmed for Monday at 19:00. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-25T06:06:06.286739"
+    }
+  ]
+}

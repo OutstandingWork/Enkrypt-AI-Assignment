@@ -1,0 +1,37 @@
+{
+  "session_id": "cc39bfae-6d67-4cbd-89ac-f87fc23b0d2c",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-27T05:06:48.807617",
+  "last_updated": "2025-04-27T05:06:59.458581",
+  "status": "completed",
+  "context": {
+    "intent": "cancellation",
+    "day": "Monday",
+    "time": "18:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Cancel the booking at Monday 6PM and book a table for me at Tuesday 6PM",
+      "timestamp": "2025-04-27T05:06:48.825610"
+    },
+    {
+      "role": "system",
+      "content": "I could not understand your request. Please try to rephrase it using a clear day and time between 9 AM and 11 PM.",
+      "timestamp": "2025-04-27T05:06:49.224965"
+    },
+    {
+      "role": "user",
+      "content": "Cancel the booking at Monday 6PM",
+      "timestamp": "2025-04-27T05:06:58.519211"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for a hotel booking cancellation:\n\n\"Hi Pratyush, \n\nWe've successfully cancelled your booking as requested. You're all set! Your booking was cancelled on Monday at 18:00. If you need to make any new arrangements or have any questions, feel free to reach out to us. We're here to help. \n\nThanks for choosing us, and we hope to welcome you again soon!\"\n\nLet me know if you need any adjustments!",
+      "timestamp": "2025-04-27T05:06:59.448569"
+    }
+  ]
+}

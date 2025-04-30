@@ -1,0 +1,56 @@
+{
+  "session_id": "3599a508-11d6-43c6-886d-fc619591e2a4",
+  "user_name": "wjkfb",
+  "created_at": "2025-04-27T19:56:24.148994",
+  "last_updated": "2025-04-27T19:59:04.397639",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "date": "2025-11-07",
+    "time": "21:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-11-07",
+      "time": "21:00",
+      "booking_id": 20
+    },
+    "last_booking_date": "2025-11-07",
+    "last_booking_time": "21:00",
+    "last_booking_id": 20,
+    "reference_date": "2025-04-27T19:56:24.148994"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book for Diwali 9PM",
+      "timestamp": "2025-04-27T19:56:24.160986"
+    },
+    {
+      "role": "system",
+      "content": "Oh no, we're so sorry to inform you that the slot you requested for Diwali at Paradise Grill is already booked. Please consider alternative timings or dates, and we'd be happy to assist you in finding a new spot. Let's make your Diwali celebration unforgettable!",
+      "timestamp": "2025-04-27T19:56:26.312433"
+    },
+    {
+      "role": "user",
+      "content": "Book for Independence Day 9PM",
+      "timestamp": "2025-04-27T19:58:09.998080"
+    },
+    {
+      "role": "system",
+      "content": "Hooray! Your Independence Day celebration just got a whole lot tastier! We've successfully booked a slot for you at Paradise Grill on July 4th at 9:00 PM, and your booking ID is 23. We can't wait to welcome you!",
+      "timestamp": "2025-04-27T19:58:13.053462"
+    },
+    {
+      "role": "user",
+      "content": "Book for Diwali 9PM",
+      "timestamp": "2025-04-27T19:59:01.999314"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for the Paradise Grill booking result:\n\n\"Hooray! We're thrilled to confirm that your Diwali reservation at Paradise Grill on November 7th at 9:00 PM has been successfully booked! Your booking ID is 20 - we can't wait to celebrate with you!",
+      "timestamp": "2025-04-27T19:59:04.375061"
+    }
+  ]
+}

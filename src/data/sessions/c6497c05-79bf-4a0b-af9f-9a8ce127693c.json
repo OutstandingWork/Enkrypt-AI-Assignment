@@ -1,0 +1,42 @@
+{
+  "session_id": "c6497c05-79bf-4a0b-af9f-9a8ce127693c",
+  "user_name": "dgbds",
+  "created_at": "2025-04-28T00:19:58.710607",
+  "last_updated": "2025-04-28T00:20:57.308403",
+  "status": "active",
+  "context": {
+    "intent": "availability",
+    "date": "2025-05-01",
+    "time": "13:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": null,
+    "last_booking_date": null,
+    "last_booking_time": null,
+    "last_booking_id": null,
+    "reference_date": "2025-04-28T00:19:58.710607"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table on Labour's day for 1PM",
+      "timestamp": "2025-04-28T00:19:58.722251"
+    },
+    {
+      "role": "system",
+      "content": "Oh no, we're so sorry to inform you that the slot you requested for Labour's Day at Paradise Grill is already booked. Please let us help you explore alternative time slots or dates that might work better for you. We're still excited to have you dine with us!",
+      "timestamp": "2025-04-28T00:20:00.061116"
+    },
+    {
+      "role": "user",
+      "content": "Then do it for day after that",
+      "timestamp": "2025-04-28T00:20:39.807421"
+    },
+    {
+      "role": "user",
+      "content": "The day after Labour's day",
+      "timestamp": "2025-04-28T00:20:57.159499"
+    }
+  ]
+}

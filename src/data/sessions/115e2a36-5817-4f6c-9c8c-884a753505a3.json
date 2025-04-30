@@ -1,0 +1,27 @@
+{
+  "session_id": "115e2a36-5817-4f6c-9c8c-884a753505a3",
+  "user_name": "Piyush",
+  "created_at": "2025-04-27T16:53:02.214859",
+  "last_updated": "2025-04-27T16:53:02.661655",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "date": "2025-12-24",
+    "time": "21:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": null,
+    "last_booking_date": null,
+    "last_booking_time": null,
+    "last_booking_id": null,
+    "reference_date": "2025-04-27T16:53:02.214859"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "I would like to book a table 9PM, Christmas Eve",
+      "timestamp": "2025-04-27T16:53:02.227864"
+    }
+  ]
+}

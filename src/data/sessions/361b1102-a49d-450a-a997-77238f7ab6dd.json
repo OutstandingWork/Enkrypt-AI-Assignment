@@ -1,0 +1,76 @@
+{
+  "session_id": "361b1102-a49d-450a-a997-77238f7ab6dd",
+  "user_name": "Piyush",
+  "created_at": "2025-04-27T22:20:47.166482",
+  "last_updated": "2025-04-27T22:25:13.584879",
+  "status": "completed",
+  "context": {
+    "intent": "unknown",
+    "date": "2025-09-29",
+    "time": "17:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-09-29",
+      "time": "17:00",
+      "booking_id": 24
+    },
+    "last_booking_date": "2025-09-29",
+    "last_booking_time": "17:00",
+    "last_booking_id": 24,
+    "reference_date": "2025-04-27T22:20:47.166482"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book for Diwali 9PM",
+      "timestamp": "2025-04-27T22:20:47.179499"
+    },
+    {
+      "role": "system",
+      "content": "Hooray! We're thrilled to confirm your Diwali reservation at Paradise Grill on 2025-10-20 at 21:00! Your booking ID is 21 - we can't wait to celebrate with you!",
+      "timestamp": "2025-04-27T22:20:49.728947"
+    },
+    {
+      "role": "user",
+      "content": "Book for Janmashtmi 7PM",
+      "timestamp": "2025-04-27T22:21:09.023692"
+    },
+    {
+      "role": "system",
+      "content": "Hooray! We're thrilled to confirm that your table is booked for Janmashtmi on 2025-09-02 at 19:00 at Paradise Grill! Your booking ID is 22, and we can't wait to welcome you to a fantastic dining experience!",
+      "timestamp": "2025-04-27T22:21:12.466997"
+    },
+    {
+      "role": "user",
+      "content": "Book for Dussehra, 10PM",
+      "timestamp": "2025-04-27T22:22:00.182899"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for the Paradise Grill booking result:\n\n\"Hooray! Your table is all set for Dussehra at Paradise Grill on 2025-10-02 at 22:00! We're thrilled to welcome you to our restaurant - your booking ID is 23, and we can't wait to serve you a fantastic dining experience!",
+      "timestamp": "2025-04-27T22:22:01.284927"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for 5PM at International Coffee Day",
+      "timestamp": "2025-04-27T22:23:53.492143"
+    },
+    {
+      "role": "system",
+      "content": "Hooray! Your table is booked at Paradise Grill for International Coffee Day on September 29th at 17:00! We can't wait to welcome you on this special day - your booking ID is 24, see you soon!",
+      "timestamp": "2025-04-27T22:23:54.777080"
+    },
+    {
+      "role": "user",
+      "content": "Cancel the booking I did on coffee day",
+      "timestamp": "2025-04-27T22:25:13.371552"
+    },
+    {
+      "role": "system",
+      "content": "I couldn't understand your request. Could you please specify if you'd like to make a reservation, cancel a reservation, or check availability at Paradise Grill?",
+      "timestamp": "2025-04-27T22:25:13.584879"
+    }
+  ]
+}

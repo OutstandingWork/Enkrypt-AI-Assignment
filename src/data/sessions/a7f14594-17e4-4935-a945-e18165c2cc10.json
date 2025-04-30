@@ -1,0 +1,27 @@
+{
+  "session_id": "a7f14594-17e4-4935-a945-e18165c2cc10",
+  "user_name": "PR",
+  "created_at": "2025-04-25T04:31:40.922790",
+  "last_updated": "2025-04-25T04:31:41.218483",
+  "status": "active",
+  "context": {
+    "intent": "unknown",
+    "day": null,
+    "time": null,
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table half past 6 on Monday",
+      "timestamp": "2025-04-25T04:31:40.940207"
+    },
+    {
+      "role": "system",
+      "content": "I could not understand your request. Please try to rephrase it.",
+      "timestamp": "2025-04-25T04:31:41.218483"
+    }
+  ]
+}

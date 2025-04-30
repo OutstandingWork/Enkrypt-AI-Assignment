@@ -1,0 +1,56 @@
+{
+  "session_id": "cf169bf3-29f2-4e9f-b4dd-439e7caf0376",
+  "user_name": "Piyush",
+  "created_at": "2025-04-27T17:03:26.644829",
+  "last_updated": "2025-04-27T17:10:12.272304",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "date": "2025-11-07",
+    "time": "21:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": {
+      "date": "2025-11-07",
+      "time": "21:00",
+      "booking_id": 21
+    },
+    "last_booking_date": "2025-11-07",
+    "last_booking_time": "21:00",
+    "last_booking_id": 21,
+    "reference_date": "2025-04-27T17:03:26.644829"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please book a table at 9PM on Christmas Eve",
+      "timestamp": "2025-04-27T17:03:26.666401"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for a Paradise Grill reservation result:\n\n\"Hi there! I'm so sorry to let you know that the slot you requested at Paradise Grill is already booked. Would you like me to suggest some alternative times or help you find another great spot? I'm here to help!\"",
+      "timestamp": "2025-04-27T17:03:28.844535"
+    },
+    {
+      "role": "user",
+      "content": "Please book a table at 9PM on Diwali",
+      "timestamp": "2025-04-27T17:03:42.472934"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response:\n\n\"Awesome, we've got you booked! Your table at Paradise Grill is reserved for November 7th, 2025 at 9:00 PM. We can't wait to welcome you then! Looking forward to a fantastic dining experience together.\"",
+      "timestamp": "2025-04-27T17:03:44.633125"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for upcoming Diwali, 9PM",
+      "timestamp": "2025-04-27T17:10:10.951898"
+    },
+    {
+      "role": "system",
+      "content": "Here's a friendly response for a Paradise Grill reservation result:\n\n\"Hi there! I'm so sorry to let you know that we won't be able to accommodate your reservation request at Paradise Grill. It looks like the slot you were interested in has already been booked by another guest. Would you like me to suggest some alternative times or dates that might work for you? We'd love to have you join us another time!\"",
+      "timestamp": "2025-04-27T17:10:12.272304"
+    }
+  ]
+}

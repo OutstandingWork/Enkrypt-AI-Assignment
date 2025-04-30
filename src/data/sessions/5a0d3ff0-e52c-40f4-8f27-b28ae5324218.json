@@ -1,0 +1,27 @@
+{
+  "session_id": "5a0d3ff0-e52c-40f4-8f27-b28ae5324218",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-27T05:39:57.473153",
+  "last_updated": "2025-04-27T05:39:57.711309",
+  "status": "active",
+  "context": {
+    "intent": "unknown",
+    "day": null,
+    "time": null,
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "tell me what should are available on tuesday ",
+      "timestamp": "2025-04-27T05:39:57.507166"
+    },
+    {
+      "role": "system",
+      "content": "I could not understand your request. Please try to rephrase it using a clear day and time between 9 AM and 11 PM.",
+      "timestamp": "2025-04-27T05:39:57.711309"
+    }
+  ]
+}

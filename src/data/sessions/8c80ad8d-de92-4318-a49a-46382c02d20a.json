@@ -1,0 +1,38 @@
+{
+  "session_id": "8c80ad8d-de92-4318-a49a-46382c02d20a",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-27T05:07:26.294725",
+  "last_updated": "2025-04-27T05:22:55.813021",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Thursday",
+    "time": "21:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "9PM"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book again a table for me at same date 7PM",
+      "timestamp": "2025-04-27T05:07:26.307726"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day you want to book. Please specify the day.",
+      "timestamp": "2025-04-27T05:07:26.927683"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for 9PM, Thursday",
+      "timestamp": "2025-04-27T05:22:55.232100"
+    },
+    {
+      "role": "system",
+      "content": "\"Awesome! Your hotel booking is confirmed for Thursday at 21:00. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-27T05:22:55.803001"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "session_id": "58b7999f-fb0c-4840-b4d9-e2775177cd16",
+  "user_name": "PR",
+  "created_at": "2025-04-25T05:53:04.926583",
+  "last_updated": "2025-04-25T05:53:26.843704",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "day": "unknown",
+    "time": "unknown",
+    "ambiguous_time": null,
+    "pending_clarification": true,
+    "clarification_type": "hourly_time",
+    "raw_time_expr": "6PM",
+    "original_time": "18:30",
+    "suggested_time": "19:00"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table half past 6PM on Monday\n",
+      "timestamp": "2025-04-25T05:53:04.956698"
+    },
+    {
+      "role": "system",
+      "content": "I noticed you requested a booking for half past 6PM on Monday. Our system only accepts bookings on the hour. Would you like me to book 19:00 instead? The hotel is open from 9 AM to 12 midnight.",
+      "timestamp": "2025-04-25T05:53:05.859041"
+    },
+    {
+      "role": "user",
+      "content": "No, please book it for 6PM then",
+      "timestamp": "2025-04-25T05:53:26.074437"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day you want to book. Please specify the day.",
+      "timestamp": "2025-04-25T05:53:26.843704"
+    }
+  ]
+}

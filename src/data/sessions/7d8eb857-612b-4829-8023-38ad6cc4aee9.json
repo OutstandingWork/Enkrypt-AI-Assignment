@@ -1,0 +1,27 @@
+{
+  "session_id": "7d8eb857-612b-4829-8023-38ad6cc4aee9",
+  "user_name": "Ayush",
+  "created_at": "2025-04-27T07:05:46.821594",
+  "last_updated": "2025-04-27T07:05:47.180398",
+  "status": "active",
+  "context": {
+    "intent": "cancellation",
+    "day": "unknown",
+    "time": "unknown",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Cancel the booking I did just now",
+      "timestamp": "2025-04-27T07:05:46.837605"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day to cancel. Please specify the day.",
+      "timestamp": "2025-04-27T07:05:47.180398"
+    }
+  ]
+}

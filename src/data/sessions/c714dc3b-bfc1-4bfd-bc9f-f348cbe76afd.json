@@ -1,0 +1,27 @@
+{
+  "session_id": "c714dc3b-bfc1-4bfd-bc9f-f348cbe76afd",
+  "user_name": "LKnkjbn",
+  "created_at": "2025-04-27T19:54:43.085789",
+  "last_updated": "2025-04-27T19:54:45.192717",
+  "status": "active",
+  "context": {
+    "intent": "booking",
+    "date": null,
+    "time": null,
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": null,
+    "last_booking_date": null,
+    "last_booking_time": null,
+    "last_booking_id": null,
+    "reference_date": "2025-04-27T19:54:43.085789"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please book for Diwali 9PM",
+      "timestamp": "2025-04-27T19:54:43.098795"
+    }
+  ]
+}

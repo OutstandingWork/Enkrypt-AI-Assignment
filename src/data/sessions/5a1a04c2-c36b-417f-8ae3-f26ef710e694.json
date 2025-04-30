@@ -1,0 +1,37 @@
+{
+  "session_id": "5a1a04c2-c36b-417f-8ae3-f26ef710e694",
+  "user_name": "PR",
+  "created_at": "2025-04-25T04:49:34.901245",
+  "last_updated": "2025-04-25T04:49:56.035609",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Monday",
+    "time": "06:30",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Book a table half past 6 on Monday",
+      "timestamp": "2025-04-25T04:49:34.916245"
+    },
+    {
+      "role": "system",
+      "content": "\"Hey! Just to confirm, did you mean 6:30 in the morning or 6:30 in the evening for your Monday booking?\"",
+      "timestamp": "2025-04-25T04:49:36.012038"
+    },
+    {
+      "role": "user",
+      "content": "Do it at 6:30 in the morning",
+      "timestamp": "2025-04-25T04:49:55.630046"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response:\n\n\"Booking confirmed! Your slot has been booked for Monday at 06:30. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-25T04:49:56.023607"
+    }
+  ]
+}

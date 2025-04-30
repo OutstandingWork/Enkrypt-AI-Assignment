@@ -1,0 +1,47 @@
+{
+  "session_id": "a85e8aad-e1f2-4c7e-a9c4-34d640f938da",
+  "user_name": "PR",
+  "created_at": "2025-04-25T06:33:53.618627",
+  "last_updated": "2025-04-25T06:35:25.207092",
+  "status": "completed",
+  "context": {
+    "intent": "cancellation",
+    "day": "Wednesday",
+    "time": "16:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can I cancel the booking of 4PM I did just now",
+      "timestamp": "2025-04-25T06:33:53.635059"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day to cancel. Please specify the day.",
+      "timestamp": "2025-04-25T06:33:54.026665"
+    },
+    {
+      "role": "user",
+      "content": "I cancel the booking of 4PM I did just now",
+      "timestamp": "2025-04-25T06:34:03.649027"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day to cancel. Please specify the day.",
+      "timestamp": "2025-04-25T06:34:04.028489"
+    },
+    {
+      "role": "user",
+      "content": "Please cancel the booking for 4PM Wed",
+      "timestamp": "2025-04-25T06:35:23.843889"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a hotel booking cancellation:\n\n\"Hi there, \n\nWe're happy to confirm that your booking (PR) has been successfully cancelled as of Wednesday at 16:00. You're all set! If you need to make any new arrangements or have any questions, feel free to reach out to us. \n\nBest, [Your Hotel Name] Team\"",
+      "timestamp": "2025-04-25T06:35:25.194825"
+    }
+  ]
+}

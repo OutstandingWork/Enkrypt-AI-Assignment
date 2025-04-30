@@ -1,0 +1,54 @@
+{
+  "session_id": "a51ba9e4-5104-482b-bd65-5734ddb4e2a9",
+  "user_name": "Piyush",
+  "created_at": "2025-04-27T16:46:18.839983",
+  "last_updated": "2025-04-27T16:46:50.710555",
+  "status": "active",
+  "context": {
+    "intent": "unknown",
+    "date": null,
+    "time": null,
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "last_booking": null,
+    "last_booking_date": null,
+    "last_booking_time": null,
+    "last_booking_id": null,
+    "reference_date": "2025-04-27T16:46:18.840959",
+    "raw_date": null,
+    "raw_time": null
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please book a table at 9PM on Christmas Eve",
+      "timestamp": "2025-04-27T16:46:18.856339"
+    },
+    {
+      "role": "system",
+      "content": "Could you please specify which date you would like to make a reservation at Paradise Grill?",
+      "timestamp": "2025-04-27T16:46:19.846644"
+    },
+    {
+      "role": "user",
+      "content": "I said Christmas Eve",
+      "timestamp": "2025-04-27T16:46:31.809317"
+    },
+    {
+      "role": "system",
+      "content": "Could you please specify which date you would like to make a reservation at Paradise Grill?",
+      "timestamp": "2025-04-27T16:46:32.635655"
+    },
+    {
+      "role": "user",
+      "content": "Don't you understand the meaning of Christmas Eve",
+      "timestamp": "2025-04-27T16:46:50.405282"
+    },
+    {
+      "role": "system",
+      "content": "I couldn't understand your request. Could you please specify if you'd like to make a reservation, cancel a reservation, or check availability at Paradise Grill?",
+      "timestamp": "2025-04-27T16:46:50.710555"
+    }
+  ]
+}

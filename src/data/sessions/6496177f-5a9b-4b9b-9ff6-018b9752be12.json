@@ -1,0 +1,48 @@
+{
+  "session_id": "6496177f-5a9b-4b9b-9ff6-018b9752be12",
+  "user_name": "Pratyush",
+  "created_at": "2025-04-27T05:24:58.629358",
+  "last_updated": "2025-04-27T05:29:12.685119",
+  "status": "completed",
+  "context": {
+    "intent": "booking",
+    "day": "Tuesday",
+    "time": "10:00",
+    "ambiguous_time": null,
+    "pending_clarification": false,
+    "clarification_type": null,
+    "raw_time_expr": "10 am"
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the weight of the sun ? ",
+      "timestamp": "2025-04-27T05:24:58.663950"
+    },
+    {
+      "role": "system",
+      "content": "I could not understand your request. Please try to rephrase it using a clear day and time between 9 AM and 11 PM.",
+      "timestamp": "2025-04-27T05:24:58.835402"
+    },
+    {
+      "role": "user",
+      "content": "I would like to cancel my previous booking ",
+      "timestamp": "2025-04-27T05:25:34.710834"
+    },
+    {
+      "role": "system",
+      "content": "Could not determine which day to cancel. Please specify the day.",
+      "timestamp": "2025-04-27T05:25:35.051053"
+    },
+    {
+      "role": "user",
+      "content": "Book a table for tuesday 10 am and tell me the weight of the sun ",
+      "timestamp": "2025-04-27T05:29:12.109642"
+    },
+    {
+      "role": "system",
+      "content": "Here is a friendly response for a hotel booking result:\n\n\"Great news! Your slot has been booked for Tuesday at 10:00. We're looking forward to welcoming you!\"",
+      "timestamp": "2025-04-27T05:29:12.668089"
+    }
+  ]
+}
